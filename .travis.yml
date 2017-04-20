@@ -6,7 +6,7 @@ node_js:
   - 0.8
   
 before_install:
-  - npm install -g npm@latest
+  - nvm install "$(jq -r '.engines.node' package.json)"
 
 notifications:
   email:
