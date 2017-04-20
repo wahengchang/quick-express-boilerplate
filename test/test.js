@@ -20,3 +20,23 @@ describe('Test routing', function () {
         });
     });
 })
+
+
+describe('Test Middleware', function () {
+
+    var _config = 99;
+
+    var _middle = function(res, req, next){
+            req.myInput = _config;
+            next();
+        }
+
+    var res = {}, req = {};
+
+    it('happy path', function (done) {
+        _middle(res, req, function(){
+            req.myInput.should.be.eql(_config);
+            done();
+        })
+    });
+});
