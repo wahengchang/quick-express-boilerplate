@@ -5,8 +5,8 @@ node_js:
   - 0.6
   - 0.8
   
-before_install: 
-  if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
+before_install:
+  - npm install -g npm@latest
 
 notifications:
   email:
