@@ -13,6 +13,7 @@
     "babel-cli": "^6.24.1",
     "babel-preset-latest": "^6.24.1",
     "express": "^4.15.0",
+    "express-session": "^1.15.2",
     "request": "^2.81.0"
   },
   "devDependencies": {
